@@ -36,12 +36,12 @@ public class UserService {
             while ((line = br.readLine()) != null) {
                 String[] userValues = line.split(",");
                 if (userValues.length == 4) {
-                    Long userId = Long.parseLong(userValues[0]);
+                    int id = Integer.parseInt(userValues[0]);
                     String name = userValues[1];
                     String lastName = userValues[2];
                     String secondName = userValues[3];
 
-                    User user = new User(userId, name, lastName, secondName);
+                    User user = new User(id, name, lastName, secondName);
                     userList.add(user);
                 }
             }
