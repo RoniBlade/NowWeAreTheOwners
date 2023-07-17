@@ -7,13 +7,13 @@ import lombok.*;
 @Builder
 public class User {
 
-    public User(String name, String lastName, String secondName) {
+    public User(long userId, String name, String lastName, String secondName) {
         this.name = name;
         this.lastName = lastName;
         this.secondName = secondName;
     }
 
-        private Integer id;
+        private Long id;
         private String name;
         private String lastName;
         private String secondName;
@@ -21,4 +21,9 @@ public class User {
         public int compareTo(User user) {
             return this.getId().compareTo(user.getId());
         }
+
+    public Long getUserId() {
+
+        return id;
     }
+}

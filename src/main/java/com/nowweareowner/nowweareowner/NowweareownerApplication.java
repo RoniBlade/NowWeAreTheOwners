@@ -12,11 +12,6 @@ public class NowweareownerApplication {
 	public static void main(String[] args) {
 		UserService userService = new UserService();
 		UserInterface userInterface = new UserInterface(userService);
-
 		userInterface.userInput();
-		userInterface.userInput();
-
-		userInterface.closeScan();
 	}
-
 }
